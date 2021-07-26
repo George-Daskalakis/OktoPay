@@ -91,9 +91,9 @@ public class OrderAPI {
     public ResponseEntity<?> submitOrder(@RequestBody OrderRequest orderRequest) {
         //TODO: submit a new 
         //if client reference code already exist then return an HTTP 400 (bad request) with a proper payload that contains an error code and an error message
-        Order order = new Order();
+        
         OrderDto orderDto = new OrderDto();
-
+        Order order = new Order();
         boolean sameReferenceCode = false;
         //loops through all existing orders to find if there is an order with the same client referece code
         for (Order ordersloop : orders) { 
